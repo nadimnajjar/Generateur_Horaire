@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📁 Organisation des fichiers
+## Organisation des fichiers
 
 ```
 /votre_dossier/
@@ -38,7 +38,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 Utilisation
+## Utilisation
 
 Lancer le programme :
 
@@ -68,7 +68,6 @@ LOG1015,Cours,A,Lundi,08:30,3h,11:30,Chaque semaine,2025-06-10
 ## À faire / améliorations possibles
 
 - Interface graphique (Tkinter, PyQt, etc.)
-- Gestion multi-langue
 - Export au format PDF
 
 ---
