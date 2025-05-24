@@ -128,9 +128,9 @@ def run():
     print(f"Bienvenue dans le générateur de tableau d'horaire!\nVoici les commandes disponibles: ")
     while True:
         try:
-            n=int(input(f"1. Donner un document contenant les cours d'un genie spécifique.\n2. Fusionner deux documents en un seul. \n3.Quitter\n"))
-            if n>3 or n<1:
-                raise ValueError("Le nombre doit être entre 1 et 3 inclut!\n")
+            n=int(input(f"1. Donner un document contenant les cours d'un genie spécifique.\n2. Fusionner deux documents en un seul. \n3. Effacer un document\n4. Quitter\n"))
+            if n>4 or n<1:
+                raise ValueError("Le nombre doit être entre 1 et 4 inclut!\n")
         except ValueError as e:
             print(f"Erreur: {e}")
         
@@ -157,9 +157,26 @@ def run():
                     print(f"Erreur: {e}")
 
             case 3:
+                try:
+                    doc = input("Donne le nom du document à enlever : ")
+                    if not doc.endswith(".docx"):
+                        doc += ".docx"
+
+                    if not os.path.exists(doc):
+                        raise FileNotFoundError("Le document n'existe pas.")
+
+                    os.remove(doc)
+                    print("✅ Document supprimé avec succès.")
+                except FileNotFoundError as e:
+                    print(f"Erreur : {e}")
+                except Exception as e:
+                    print(f"Une erreur est survenue : {e}")
+
+
+            case 4:
                 print("Au revoir!")
                 break
-
+        
 
 if __name__== "__main__":
     run()
