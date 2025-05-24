@@ -152,7 +152,7 @@ def run():
                     ouvrirDoc(f"{titre}.docx")
             case 2:
                 try:
-                    fusionner_selection_dossiers(".")  # ou "." pour le dossier courant
+                    fusionner_selection_dossiers(".")
                 except Exception as e:
                     print(f"Erreur: {e}")
 
